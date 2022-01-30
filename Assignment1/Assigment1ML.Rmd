@@ -1,0 +1,19 @@
+---
+title: "Assignment1"
+output:
+  pdf_document: default
+  html_document: default
+---
+```{R}
+library(tinytex)
+getwd()
+setwd("C:/Users/Swetha/Desktop/MSBA/New folder/New folder")
+swetha<-read.csv("Sampletest.csv")
+swetha
+plot(swetha$Height,swetha$Weight)
+summary(swetha)
+summary(swetha$bmi)
+swetha1<-log10(swetha$bmi)
+summary(swetha1)
+
+```
