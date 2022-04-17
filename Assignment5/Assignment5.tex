@@ -1,0 +1,604 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\title{FML\_Assignment\_5}
+\author{Swetha}
+\date{4/14/2022}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={FML\_Assignment\_5},
+  pdfauthor={Swetha},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# installing required packages}
+\FunctionTok{library}\NormalTok{(ISLR)}
+\FunctionTok{library}\NormalTok{(caret)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Loading required package: ggplot2
+\end{verbatim}
+
+\begin{verbatim}
+## Loading required package: lattice
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(dplyr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'dplyr'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(cluster)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'cluster' was built under R version 4.1.3
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(factoextra)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'factoextra' was built under R version 4.1.3
+\end{verbatim}
+
+\begin{verbatim}
+## Welcome! Want to learn more? See two factoextra-related books at https://goo.gl/ve3WBa
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(NbClust)}
+\FunctionTok{library}\NormalTok{(ppclust)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'ppclust' was built under R version 4.1.3
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(dendextend)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'dendextend' was built under R version 4.1.3
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## ---------------------
+## Welcome to dendextend version 1.15.2
+## Type citation('dendextend') for how to cite the package.
+## 
+## Type browseVignettes(package = 'dendextend') for the package vignette.
+## The github page is: https://github.com/talgalili/dendextend/
+## 
+## Suggestions and bug-reports can be submitted at: https://github.com/talgalili/dendextend/issues
+## You may ask questions at stackoverflow, use the r and dendextend tags: 
+##   https://stackoverflow.com/questions/tagged/dendextend
+## 
+##  To suppress this message use:  suppressPackageStartupMessages(library(dendextend))
+## ---------------------
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'dendextend'
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:stats':
+## 
+##     cutree
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(tidyverse)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'tidyverse' was built under R version 4.1.3
+\end{verbatim}
+
+\begin{verbatim}
+## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --
+\end{verbatim}
+
+\begin{verbatim}
+## v tibble  3.1.6     v purrr   0.3.4
+## v tidyr   1.2.0     v stringr 1.4.0
+## v readr   2.1.2     v forcats 0.5.1
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'readr' was built under R version 4.1.3
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'forcats' was built under R version 4.1.3
+\end{verbatim}
+
+\begin{verbatim}
+## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+## x purrr::lift()   masks caret::lift()
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\FunctionTok{library}\NormalTok{(proxy)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+## Attaching package: 'proxy'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:stats':
+## 
+##     as.dist, dist
+\end{verbatim}
+
+\begin{verbatim}
+## The following object is masked from 'package:base':
+## 
+##     as.matrix
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# to import the "cereal" data set}
+\NormalTok{Cereals }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"Cereals.csv"}\NormalTok{)}
+\CommentTok{\#using  head to get first few rows of the data set}
+\FunctionTok{head}\NormalTok{(Cereals)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                        name mfr type calories protein fat sodium fiber carbo
+## 1                 100%_Bran   N    C       70       4   1    130  10.0   5.0
+## 2         100%_Natural_Bran   Q    C      120       3   5     15   2.0   8.0
+## 3                  All-Bran   K    C       70       4   1    260   9.0   7.0
+## 4 All-Bran_with_Extra_Fiber   K    C       50       4   0    140  14.0   8.0
+## 5            Almond_Delight   R    C      110       2   2    200   1.0  14.0
+## 6   Apple_Cinnamon_Cheerios   G    C      110       2   2    180   1.5  10.5
+##   sugars potass vitamins shelf weight cups   rating
+## 1      6    280       25     3      1 0.33 68.40297
+## 2      8    135        0     3      1 1.00 33.98368
+## 3      5    320       25     3      1 0.33 59.42551
+## 4      0    330       25     3      1 0.50 93.70491
+## 5      8     NA       25     3      1 0.75 34.38484
+## 6     10     70       25     1      1 0.75 29.50954
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#using str to analyse the structure of the data set}
+\FunctionTok{str}\NormalTok{(Cereals)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 'data.frame':    77 obs. of  16 variables:
+##  $ name    : chr  "100%_Bran" "100%_Natural_Bran" "All-Bran" "All-Bran_with_Extra_Fiber" ...
+##  $ mfr     : chr  "N" "Q" "K" "K" ...
+##  $ type    : chr  "C" "C" "C" "C" ...
+##  $ calories: int  70 120 70 50 110 110 110 130 90 90 ...
+##  $ protein : int  4 3 4 4 2 2 2 3 2 3 ...
+##  $ fat     : int  1 5 1 0 2 2 0 2 1 0 ...
+##  $ sodium  : int  130 15 260 140 200 180 125 210 200 210 ...
+##  $ fiber   : num  10 2 9 14 1 1.5 1 2 4 5 ...
+##  $ carbo   : num  5 8 7 8 14 10.5 11 18 15 13 ...
+##  $ sugars  : int  6 8 5 0 8 10 14 8 6 5 ...
+##  $ potass  : int  280 135 320 330 NA 70 30 100 125 190 ...
+##  $ vitamins: int  25 0 25 25 25 25 25 25 25 25 ...
+##  $ shelf   : int  3 3 3 3 3 1 2 3 1 3 ...
+##  $ weight  : num  1 1 1 1 1 1 1 1.33 1 1 ...
+##  $ cups    : num  0.33 1 0.33 0.5 0.75 0.75 1 0.75 0.67 0.67 ...
+##  $ rating  : num  68.4 34 59.4 93.7 34.4 ...
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# using summary to analyse the summary of the data set}
+\FunctionTok{summary}\NormalTok{(Cereals)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##      name               mfr                type              calories    
+##  Length:77          Length:77          Length:77          Min.   : 50.0  
+##  Class :character   Class :character   Class :character   1st Qu.:100.0  
+##  Mode  :character   Mode  :character   Mode  :character   Median :110.0  
+##                                                           Mean   :106.9  
+##                                                           3rd Qu.:110.0  
+##                                                           Max.   :160.0  
+##                                                                          
+##     protein           fat            sodium          fiber       
+##  Min.   :1.000   Min.   :0.000   Min.   :  0.0   Min.   : 0.000  
+##  1st Qu.:2.000   1st Qu.:0.000   1st Qu.:130.0   1st Qu.: 1.000  
+##  Median :3.000   Median :1.000   Median :180.0   Median : 2.000  
+##  Mean   :2.545   Mean   :1.013   Mean   :159.7   Mean   : 2.152  
+##  3rd Qu.:3.000   3rd Qu.:2.000   3rd Qu.:210.0   3rd Qu.: 3.000  
+##  Max.   :6.000   Max.   :5.000   Max.   :320.0   Max.   :14.000  
+##                                                                  
+##      carbo          sugars           potass          vitamins     
+##  Min.   : 5.0   Min.   : 0.000   Min.   : 15.00   Min.   :  0.00  
+##  1st Qu.:12.0   1st Qu.: 3.000   1st Qu.: 42.50   1st Qu.: 25.00  
+##  Median :14.5   Median : 7.000   Median : 90.00   Median : 25.00  
+##  Mean   :14.8   Mean   : 7.026   Mean   : 98.67   Mean   : 28.25  
+##  3rd Qu.:17.0   3rd Qu.:11.000   3rd Qu.:120.00   3rd Qu.: 25.00  
+##  Max.   :23.0   Max.   :15.000   Max.   :330.00   Max.   :100.00  
+##  NA's   :1      NA's   :1        NA's   :2                        
+##      shelf           weight          cups           rating     
+##  Min.   :1.000   Min.   :0.50   Min.   :0.250   Min.   :18.04  
+##  1st Qu.:1.000   1st Qu.:1.00   1st Qu.:0.670   1st Qu.:33.17  
+##  Median :2.000   Median :1.00   Median :0.750   Median :40.40  
+##  Mean   :2.208   Mean   :1.03   Mean   :0.821   Mean   :42.67  
+##  3rd Qu.:3.000   3rd Qu.:1.00   3rd Qu.:1.000   3rd Qu.:50.83  
+##  Max.   :3.000   Max.   :1.50   Max.   :1.500   Max.   :93.70  
+## 
+\end{verbatim}
+
+Now I am scaling the data to remove NA values from the data set.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Here I am Creating duplicate of data set for preprocessing}
+\NormalTok{Scaled\_Cereals }\OtherTok{\textless{}{-}}\NormalTok{ Cereals}
+\CommentTok{\# Now I am scaling the data set to place it into a clustering algorithm}
+\NormalTok{Scaled\_Cereals[ , }\FunctionTok{c}\NormalTok{(}\DecValTok{4}\SpecialCharTok{:}\DecValTok{16}\NormalTok{)] }\OtherTok{\textless{}{-}} \FunctionTok{scale}\NormalTok{(Cereals[ , }\FunctionTok{c}\NormalTok{(}\DecValTok{4}\SpecialCharTok{:}\DecValTok{16}\NormalTok{)])}
+\CommentTok{\# Here I am Removing NA values from data set using omit function}
+\NormalTok{Preprocessed\_Cereal }\OtherTok{\textless{}{-}} \FunctionTok{na.omit}\NormalTok{(Scaled\_Cereals)}
+\CommentTok{\#Using head to display first few rows after removing NA}
+\FunctionTok{head}\NormalTok{(Preprocessed\_Cereal)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                        name mfr type   calories    protein         fat
+## 1                 100%_Bran   N    C -1.8929836  1.3286071 -0.01290349
+## 2         100%_Natural_Bran   Q    C  0.6732089  0.4151897  3.96137277
+## 3                  All-Bran   K    C -1.8929836  1.3286071 -0.01290349
+## 4 All-Bran_with_Extra_Fiber   K    C -2.9194605  1.3286071 -1.00647256
+## 6   Apple_Cinnamon_Cheerios   G    C  0.1599704 -0.4982277  0.98066557
+## 7               Apple_Jacks   K    C  0.1599704 -0.4982277 -1.00647256
+##       sodium       fiber      carbo     sugars     potass   vitamins      shelf
+## 1 -0.3539844  3.29284661 -2.5087829 -0.2343906  2.5753685 -0.1453172  0.9515734
+## 2 -1.7257708 -0.06375361 -1.7409943  0.2223705  0.5160205 -1.2642598  0.9515734
+## 3  1.1967306  2.87327158 -1.9969238 -0.4627711  3.1434645 -0.1453172  0.9515734
+## 4 -0.2346986  4.97114672 -1.7409943 -1.6046739  3.2854885 -0.1453172  0.9515734
+## 6  0.2424445 -0.27354112 -1.1011705  0.6791317 -0.4071355 -0.1453172 -1.4507595
+## 7 -0.4136273 -0.48332864 -0.9732057  1.5926539 -0.9752315 -0.1453172 -0.2495930
+##       weight       cups     rating
+## 1 -0.1967771 -2.1100340  1.8321876
+## 2 -0.1967771  0.7690100 -0.6180571
+## 3 -0.1967771 -2.1100340  1.1930986
+## 4 -0.1967771 -1.3795303  3.6333849
+## 6 -0.1967771 -0.3052601 -0.9365625
+## 7 -0.1967771  0.7690100 -0.6756899
+\end{verbatim}
+
+The total number of observations,after pre-processing and scaling the
+data, went from 77 to 74. So, there were only 3 records with ``NA''
+value.
+
+\hypertarget{q-apply-hierarchical-clustering-to-the-data-using-euclidean-distance-to-the-normalized-measurements.-use-agnes-to-compare-the-clustering-from-single-linkage-complete-linkage-average-linkage-and-ward.-choose-the-best-method.}{%
+\subsection{Q) Apply hierarchical clustering to the data using Euclidean
+distance to the normalized measurements. Use Agnes to compare the
+clustering from single linkage, complete linkage, average linkage, and
+Ward. Choose the best
+method.}\label{q-apply-hierarchical-clustering-to-the-data-using-euclidean-distance-to-the-normalized-measurements.-use-agnes-to-compare-the-clustering-from-single-linkage-complete-linkage-average-linkage-and-ward.-choose-the-best-method.}}
+
+\hypertarget{single-linkage}{%
+\subsection{Single Linkage:}\label{single-linkage}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Creating the dissimilarity matrix for all the numeric values in the data set through Euclidean distance measurements}
+\NormalTok{Cereal\_Euclidean }\OtherTok{\textless{}{-}} \FunctionTok{dist}\NormalTok{(Preprocessed\_Cereal[ , }\FunctionTok{c}\NormalTok{(}\DecValTok{4}\SpecialCharTok{:}\DecValTok{16}\NormalTok{)], }\AttributeTok{method =} \StringTok{"euclidean"}\NormalTok{)}
+\CommentTok{\# Performing an  hierarchical clustering through the single linkage method}
+\NormalTok{HC\_Single }\OtherTok{\textless{}{-}} \FunctionTok{agnes}\NormalTok{(Cereal\_Euclidean, }\AttributeTok{method =} \StringTok{"single"}\NormalTok{)}
+\CommentTok{\# Here I am Plotting the results of the different methods}
+\FunctionTok{plot}\NormalTok{(HC\_Single, }
+     \AttributeTok{main =} \StringTok{"Customer Cereal Ratings {-} AGNES Using  Single Linkage Method"}\NormalTok{,}
+     \AttributeTok{xlab =} \StringTok{"Cereal"}\NormalTok{,}
+     \AttributeTok{ylab =} \StringTok{"Height"}\NormalTok{,}
+     \AttributeTok{cex.axis =} \DecValTok{1}\NormalTok{,}
+     \AttributeTok{cex =} \FloatTok{0.50}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Assignment5_files/figure-latex/unnamed-chunk-4-1.pdf}
+\includegraphics{Assignment5_files/figure-latex/unnamed-chunk-4-2.pdf}
+
+\hypertarget{complete-linkage}{%
+\section{Complete Linkage:}\label{complete-linkage}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Performing the hierarchical clustering through the complete linkage method}
+\NormalTok{HC\_Complete }\OtherTok{\textless{}{-}} \FunctionTok{agnes}\NormalTok{(Cereal\_Euclidean, }\AttributeTok{method =} \StringTok{"complete"}\NormalTok{)}
+\CommentTok{\# Here I am Plotting the results of the different methods}
+\FunctionTok{plot}\NormalTok{(HC\_Complete, }
+     \AttributeTok{main =} \StringTok{"Customer Cereal Ratings {-} AGNES  Using Complete Linkage Method"}\NormalTok{,}
+     \AttributeTok{xlab =} \StringTok{"Cereal"}\NormalTok{,}
+     \AttributeTok{ylab =} \StringTok{"Height"}\NormalTok{,}
+     \AttributeTok{cex.axis =} \DecValTok{1}\NormalTok{,}
+     \AttributeTok{cex =} \FloatTok{0.50}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Assignment5_files/figure-latex/unnamed-chunk-5-1.pdf}
+\includegraphics{Assignment5_files/figure-latex/unnamed-chunk-5-2.pdf}
+
+\hypertarget{average-linkage}{%
+\section{Average Linkage:}\label{average-linkage}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Performing the hierarchical clustering through the average linkage method}
+\NormalTok{HC\_Average }\OtherTok{\textless{}{-}} \FunctionTok{agnes}\NormalTok{(Cereal\_Euclidean, }\AttributeTok{method =} \StringTok{"average"}\NormalTok{)}
+\CommentTok{\# Here I am Plotting the results of the different methods}
+\FunctionTok{plot}\NormalTok{(HC\_Average, }
+     \AttributeTok{main =} \StringTok{"Customer Cereal Ratings {-} AGNES using Average Linkage Method"}\NormalTok{,}
+     \AttributeTok{xlab =} \StringTok{"Cereal"}\NormalTok{,}
+     \AttributeTok{ylab =} \StringTok{"Height"}\NormalTok{,}
+     \AttributeTok{cex.axis =} \DecValTok{1}\NormalTok{,}
+     \AttributeTok{cex =} \FloatTok{0.50}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Assignment5_files/figure-latex/unnamed-chunk-6-1.pdf}
+\includegraphics{Assignment5_files/figure-latex/unnamed-chunk-6-2.pdf}
+
+\hypertarget{ward-method}{%
+\section{Ward Method:}\label{ward-method}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Performing the hierarchical clustering through the ward linkage method}
+\NormalTok{HC\_Ward }\OtherTok{\textless{}{-}} \FunctionTok{agnes}\NormalTok{(Cereal\_Euclidean, }\AttributeTok{method =} \StringTok{"ward"}\NormalTok{)}
+\CommentTok{\#Here I am  Plotting the results of the different methods}
+\FunctionTok{plot}\NormalTok{(HC\_Ward, }
+     \AttributeTok{main =} \StringTok{"Customer Cereal Ratings {-} AGNES using Ward Linkage Method"}\NormalTok{,}
+     \AttributeTok{xlab =} \StringTok{"Cereal"}\NormalTok{,}
+     \AttributeTok{ylab =} \StringTok{"Height"}\NormalTok{,}
+     \AttributeTok{cex.axis =} \DecValTok{1}\NormalTok{,}
+     \AttributeTok{cex =} \FloatTok{0.55}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Assignment5_files/figure-latex/unnamed-chunk-7-1.pdf}
+\includegraphics{Assignment5_files/figure-latex/unnamed-chunk-7-2.pdf}
+The clustering structure is closer if the value is close to 1.0. As a
+result, the method with the closest value to 1.0 will be chosen. Single
+Linkage: 0.61 Complete Linkage: 0.84 Average Linkage: 0.78 Ward Method:
+0.90 Here From the result, The best clustering model is the Ward method.
+
+\hypertarget{q-how-many-clusters-would-you-choose}{%
+\subsection{Q) How many clusters would you
+choose?}\label{q-how-many-clusters-would-you-choose}}
+
+\hypertarget{here-i-am-using-elbow-and-silhouette-methods-to-determine-the-appropriate-number-of-clusters.}{%
+\section{Here I am using elbow and silhouette methods to determine the
+appropriate number of
+clusters.}\label{here-i-am-using-elbow-and-silhouette-methods-to-determine-the-appropriate-number-of-clusters.}}
+
+\hypertarget{elbow-method}{%
+\subsection{Elbow Method:}\label{elbow-method}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{fviz\_nbclust}\NormalTok{(Preprocessed\_Cereal[ , }\FunctionTok{c}\NormalTok{(}\DecValTok{4}\SpecialCharTok{:}\DecValTok{16}\NormalTok{)], hcut, }\AttributeTok{method =} \StringTok{"wss"}\NormalTok{, }\AttributeTok{k.max =} \DecValTok{25}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Optimal Number of Clusters using Elbow Method"}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{geom\_vline}\NormalTok{(}\AttributeTok{xintercept =} \DecValTok{12}\NormalTok{, }\AttributeTok{linetype =} \DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Assignment5_files/figure-latex/unnamed-chunk-8-1.pdf}
+
+\#\#Silhouette Method:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{fviz\_nbclust}\NormalTok{(Preprocessed\_Cereal[ , }\FunctionTok{c}\NormalTok{(}\DecValTok{4}\SpecialCharTok{:}\DecValTok{16}\NormalTok{)], }
+\NormalTok{                               hcut, }
+                               \AttributeTok{method =} \StringTok{"silhouette"}\NormalTok{, }
+                               \AttributeTok{k.max =} \DecValTok{25}\NormalTok{) }\SpecialCharTok{+}
+  \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Optimal Number of Clusters using Silhouette Method"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Assignment5_files/figure-latex/unnamed-chunk-9-1.pdf}
+Here from the results of the elbow and silhouette methods,we can see
+that the optimal number of clusters would be 12.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Here I am  Plotting the Ward hierarchical tree with the 12 clusters outlined for reference}
+\FunctionTok{plot}\NormalTok{(HC\_Ward, }
+     \AttributeTok{main =} \StringTok{"AGNES {-} Ward Linkage Method using 12 Clusters Outlined"}\NormalTok{,}
+     \AttributeTok{xlab =} \StringTok{"Cereal"}\NormalTok{,}
+     \AttributeTok{ylab =} \StringTok{"Height"}\NormalTok{,}
+     \AttributeTok{cex.axis =} \DecValTok{1}\NormalTok{,}
+     \AttributeTok{cex =} \FloatTok{0.50}\NormalTok{,)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Assignment5_files/figure-latex/unnamed-chunk-10-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{rect.hclust}\NormalTok{(HC\_Ward, }\AttributeTok{k =} \DecValTok{12}\NormalTok{, }\AttributeTok{border =} \DecValTok{1}\SpecialCharTok{:}\DecValTok{12}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Assignment5_files/figure-latex/unnamed-chunk-10-2.pdf}
+
+\hypertarget{q-the-elementary-public-schools-would-like-to-choose-a-set-of-cereals-to-include-in-their-daily-cafeterias.-every-day-a-different-cereal-is-offered-but-all-cereals-should-support-a-healthy-diet.-for-this-goal-you-are-requested-to-find-a-cluster-of-healthy-cereals.-should-the-data-be-normalized-if-not-how-should-they-be-used-in-the-cluster-analysis}{%
+\subsection{Q) The elementary public schools would like to choose a set
+of Cereals to include in their daily cafeterias. Every day a different
+cereal is offered, but all Cereals should support a healthy diet. For
+this goal, you are requested to find a cluster of ``healthy Cereals.''
+Should the data be normalized? If not, how should they be used in the
+cluster
+analysis?}\label{q-the-elementary-public-schools-would-like-to-choose-a-set-of-cereals-to-include-in-their-daily-cafeterias.-every-day-a-different-cereal-is-offered-but-all-cereals-should-support-a-healthy-diet.-for-this-goal-you-are-requested-to-find-a-cluster-of-healthy-cereals.-should-the-data-be-normalized-if-not-how-should-they-be-used-in-the-cluster-analysis}}
+
+Since the nutritional information for cereal is normalized based on the
+sample of cereal being assessed, normalizing the data would not be
+appropriate in this circumstance. As a result, the data collected could
+only include Cereals with a very high sugar content and very little
+fiber, iron, or other nutritional information. Once the cereal has been
+normalized throughout the sample set, it's impossible to say how much
+nutrition it will supply a child. We might assume that a cereal with an
+iron level of 0.999 includes almost all of the nutrional iron that a
+child requires; nevertheless, it could simply be the best of the worst
+in the sample set with no nutrional value. As a result, converting the
+data to a ratio of daily suggested calories, fiber, carbs, and other
+nutrients for a child would be a better approach to preprocess it. This
+would allow analysts to make more educated cluster judgments during the
+review process while also preventing a few larger variables from
+overriding the distance estimations. When examining the clusters, an
+analyst may examine the cluster average to determine what percentage of
+a student's daily nutritional needs would be met by XX cereal. Employees
+would be able to make well-informed decisions on which ``healthy''
+cereal clusters to choose as a result of this.
+
+\end{document}
